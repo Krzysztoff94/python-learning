@@ -7,19 +7,22 @@ print("5. Show min")
 print("6. Show average")
 print("7. Exit")
 
+costs = []
 
-costs = {}
+def add_cost(costs_list):
 
-def cost(tuple={}):
-    tuple['name'] = str(input("Give name: "))
-    tuple['value'] = int(input("Give value: "))
-    tuple['category'] = str(input("Give category: "))
+    single_cost = {
+        'name': input("Give name: "),
+        'value': int(input("Give value: ")),
+        'category': input("Give category: "),
+    }
+    costs_list.append(single_cost)
     
 while True:
     choose = int(input("Choose: "))
     while True:
         if choose == 1:
-            cost(costs)
+            add_cost(costs)
             break
         elif choose == 2:
             print(costs)
