@@ -27,6 +27,10 @@ while True:
         elif choose == 2:
             print(costs)
             break
+        elif choose == 3:
+            suma = sum(list(element.values())[1] for element in costs)
+            print(suma)
+            break
         else:
             break
     if choose == 7:
