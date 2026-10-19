@@ -19,6 +19,7 @@ def add_cost(costs_list):
     costs_list.append(single_cost)
     
 while True:
+
     choose = int(input("Choose: "))
     while True:
         if choose == 1:
@@ -28,8 +29,16 @@ while True:
             print(costs)
             break
         elif choose == 3:
-            suma = sum(list(element.values())[1] for element in costs)
+            suma = sum(element['value'] for element in costs)
             print(suma)
+            break
+        elif choose == 4:
+            maks = max(element['value'] for element in costs)
+            print(maks)
+            break
+        elif choose == 5:
+            maks = min(element['value'] for element in costs)
+            print(maks)
             break
         else:
             break
