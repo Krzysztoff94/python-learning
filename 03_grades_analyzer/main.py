@@ -49,4 +49,3 @@ def neagtywne(lista):
             poz.append(i)
     print(f"Negatywne: {len(poz)}")
 neagtywne(oceny)
-
